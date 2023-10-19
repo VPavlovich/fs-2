@@ -1,0 +1,80 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 36px;
+    color: #333;
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+}
+
+.login-form {
+    width: 400px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 10px;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    color: #333;
+}
+
+input {
+    display: block;
+    width: 100%;
+    height: 30px;
+    border: 1px solid #ccc;
+    padding: 5px;
+}
+
+button {
+    display: block;
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: #333;
+    color: #fff;
+}
+
+button:hover {
+    background-color: #444;
+}
+
+/* new code */
+
+.App-link-ref {
+  display: block;
+  border: none;
+  color: #000;
+  margin: 5px 20px;
+}
+
+.buttons label{
+    float: left;
+}
