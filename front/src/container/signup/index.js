@@ -2,6 +2,7 @@ import "./index.css";
 import { Link } from 'react-router-dom';
 import  Field from "../../component/field";
 import  Buttonlink from "../../component/button-link";
+import  Button from "../../component/button";
 
 export default function Component() {
   return (
@@ -46,11 +47,12 @@ export default function Component() {
                         id="ref-signin"
                         label="Forgot you password?"
                         text="Already have an account?"
-                        to="/signin"
+                        to="/signup"
                     />                                  
-                <div className="form-group">
+                {/* <div className="form-group">
                     <button type="submit" id="login-button">Войти</button>
-                </div>
+                </div> */}
+                <Button classname="form-group" type="button" id="signup" text="Войти"  />
             </form>
         </div>        
         <script src="script.js" />

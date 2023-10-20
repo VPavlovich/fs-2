@@ -1,7 +1,7 @@
 import "./index.css";
 // import { Link } from 'react-router-dom';
 import  Field from "../../component/field";
-// import  Buttonlink from "../../component/button-link";
+import  Button from "../../component/button";
 
 export default function Component() {
   return (
@@ -21,11 +21,13 @@ export default function Component() {
                         type="text"
                         label="Code"
                         action="signupForm.change"
-                        placeholder="Confirm"
+                        placeholder="Code to confirm"
                     />                      
-                <div class="form-group">
+                {/* <div class="form-group">
                     <button type="submit" id="confirm">Confirm</button>
-                </div>
+                </div> */}
+                
+                <Button classname="form-group" type="button" id="signup-confirm" text="Confirm"  />
             </form>
         </div>        
         <script src="script.js" />

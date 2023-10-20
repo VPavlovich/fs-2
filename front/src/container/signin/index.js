@@ -2,6 +2,7 @@ import "./index.css";
 import { Link } from 'react-router-dom';
 import  Field from "../../component/field";
 import  Buttonlink from "../../component/button-link";
+import  Button from "../../component/button";
 
 export default function Component() {
   return (
@@ -48,9 +49,10 @@ export default function Component() {
                         text="restore"
                         to="/restore"
                     />                         
-                <div class="form-group">
+                {/* <div class="form-group">
                     <button type="submit" id="login-button">Continue</button>
-                </div>
+                </div> */}
+                <Button classname="form-group" type="button" id="signin" text="Continue"  />
             </form>
         </div>        
         <script src="script.js" />

@@ -1,20 +1,15 @@
 import "./index.css";
-import { Link } from 'react-router-dom';
 import  Field from "../../component/field";
-import  Buttonlink from "../../component/button-link";
+import  Button from "../../component/button";
 
 export default function Component() {
   return (
     <div className="container">
-        <h1>Sign up</h1>
-        <p>Choose a registration method</p>
+        <h1></h1>
+        <p>Send</p>
         <div className="login-form">
             {/* <h2>Sign Up</h2> */}
-            <form id="login-form" method="POST" action="/login">
-                {/* <div className="form-group">
-                    <label htmlFor="username">Email</label>
-                    <input type="email" id="username" name="username" placeholder="Введите email пользователя" required />
-                </div> */}
+            <form id="login-form" method="" action="/send">
                 <Field 
                         name="email"
                         classname="form-group"
@@ -23,34 +18,21 @@ export default function Component() {
                         action="signupForm.change"
                         placeholder="Ваш e-mail"
                     />
-                {/* <div className="form-group">
-                    <label htmlFor="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Введите пароль" required />
-                </div> */}
                 <Field 
-                        name="password"
+                        name="sum"
                         classname="form-group"
                         type="password"
-                        label="Password"
+                        label="Sum"
                         action="signupForm.change(this.name,this.value)"
-                        placeholder="Введiть пароль"
-                    />                
-                {/* <div className="buttons">
-                    <label htmlFor="ref-signin" >Forgot you password?</label>
-                    <Link className="App-link-ref" id="ref-signup" to="/signin">
-                    Already have an account?
-                    </Link>
-                </div> */}
-                <Buttonlink
-                        classname="buttons"                        
-                        id="ref-signin"
-                        label="Forgot you password?"
-                        text="Already have an account?"
-                        to="/signin"
-                    />                                  
-                <div className="form-group">
-                    <button type="submit" id="login-button">Войти</button>
-                </div>
+                        placeholder="Введiть суму"
+                    />   
+                    <Button
+                        classname="form-group"
+                        type="button"
+                        id="login-button"
+                        text="Send"
+                        color="blue"
+                    />  
             </form>
         </div>        
         <script src="script.js" />

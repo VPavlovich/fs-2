@@ -1,3 +1,81 @@
+.balance .head {
+    margin: 20px auto;
+    background-image: url("back-balance.svg");
+    height: 202px;
+    width: 393px;
+    color: #fff;    
+}
+h4{
+    text-align: center;
+    padding: 20px 0;
+}
+.balance h1{
+    color: #fff;
+}
+.rs{
+  margin-left: auto;
+  margin-right: auto;
+  width: 6em;
+  position: sticky;
+  z-index: 999999;  
+  margin-top: 88px;
+}
+.recieve{
+    background-image: url("arrow-down-right.png");
+    background-repeat: no-repeat;
+    width: 42px;
+    height: 42px; 
+    float: left;    
+    border: 4px solid #fff;
+    border-radius: 50%;    
+    background-color: #5B94E9;
+}
+.send{
+    background-image: url("people-upload.png");
+    background-repeat: no-repeat;
+    width: 42px;
+    height: 42px;
+    float: left;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    margin-left: 5px;
+    background-color: #5B94E9;
+}
+.send-label, .recieve-label{
+    position: absolute;
+    top: 42px;
+    font-size: 76%;
+}
+.recieve-label{
+    left: 0px;
+}
+.send-label{
+    right: 15px;
+}
+
+.table-list {
+    margin: 48px auto;
+    width: 393px;
+}
+.table-list div{
+    float: left;
+}
+/* .table-list div, .table-list td{
+    width: 50px;
+} */
+.sender-sign {
+    width: 15%;
+}
+.sender {
+    width: 65%;
+    padding-top: 12px;
+}
+.amount {
+    width: 20%;
+    padding-top: 12px;
+}
+/* --------------------------------- */
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -22,7 +100,7 @@ p {
     color: #666;
 }
 
-.login-form {
+/* .login-form {
     width: 400px;
     margin: 20px auto;
     border: 1px solid #ccc;
@@ -43,9 +121,9 @@ label {
     display: block;
     font-size: 16px;
     color: #333;
-}
+} */
 
-input {
+/* input {
     display: block;
     width: 100%;
     height: 30px;
@@ -64,11 +142,11 @@ button {
 
 button:hover {
     background-color: #444;
-}
+} */
 
 /* new code */
 
-.App-link-ref {
+/* .App-link-ref {
     display: block;
     border: none;
     color: #000;
@@ -77,4 +155,4 @@ button:hover {
   
   .buttons label{
       float: left;
-  }
+  } */
