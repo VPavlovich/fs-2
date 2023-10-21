@@ -1,7 +1,7 @@
 import "./index.css";
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import  Field from "../../component/field";
-import  Buttonlink from "../../component/button-link";
+// import  Buttonlink from "../../component/button-link";
 
 export default function Component() {
   return (

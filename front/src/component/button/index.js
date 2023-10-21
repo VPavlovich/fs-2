@@ -1,5 +1,5 @@
 import "./index.css";
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 export default function Component({ classname,type,  id, text, color }) {
   return (

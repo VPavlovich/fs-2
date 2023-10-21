@@ -1,5 +1,5 @@
 import "./index.css";
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 import  Field from "../../component/field";
 import  Buttonlink from "../../component/button-link";
 import  Button from "../../component/button";
@@ -11,7 +11,7 @@ export default function Component() {
         <p>Choose a registration method</p>
         <div className="login-form">
             {/* <h2>Sign Up</h2> */}
-            <form id="login-form" method="POST" action="/login">
+            <form id="login-form" method="POST" action="/signup">
                 {/* <div className="form-group">
                     <label htmlFor="username">Email</label>
                     <input type="email" id="username" name="username" placeholder="Введите email пользователя" required />

@@ -4,8 +4,7 @@ import  Button from "../../component/button";
 
 export default function Component() {
   return (
-    <div className="container">
-        <h1></h1>
+    <div className="container">,
         <p>Send</p>
         <div className="login-form">
             {/* <h2>Sign Up</h2> */}

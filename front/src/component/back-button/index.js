@@ -9,7 +9,7 @@
 
 export default function Component() {
   return (
-    <div class="back-button" onclick="backButton.back();">
+    <div className="back-button" onclick="backButton.back();">
       <img src="/svg/back-button.svg" alt="<" width="24" height="24" />
     </div>
   );

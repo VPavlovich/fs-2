@@ -1,33 +1,77 @@
+import  Grid from "../../component/grid";
+import  FieldForm2 from "../../component/field2-form";
+import { Alert, Loader, LOAD_STATUS } from "../../component/load";
+import { useState } from "react";
+//----------------------------------------------------------------up
 import "./index.css";
-import { Link } from 'react-router-dom';
-import  Field from "../../component/field";
-import  Buttonlink from "../../component/button-link";
-import  Button from "../../component/button";
+// import { Link } from 'react-router-dom';
+// import  Field from "../../component/field";
+// import  Buttonlink from "../../component/button-link";
 
 export default function Component() {
+// ----------------------------------------down
+const [status, setStatus] = useState(null);
+const [message, setMessage] = useState("");
+
+    const handleSubmit = (value) => {
+        // console.log('sended value=', value);
+        return sendData({ value });
+      };
+    
+      const sendData = async (dataToSend) => {
+        setStatus(LOAD_STATUS.PROGRESS);
+    
+        try {
+          const res = await fetch("http://localhost:4000/login", {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: convertData(dataToSend),
+            // body: dataToSend.value,
+          });
+          // console.log('body=', convertData(dataToSend));
+          // console.log('body=', dataToSend.value);
+    
+          const data = await res.json();
+    
+          if (res.ok) {
+            setStatus(null);
+    
+            // if (onCreate) onCreate();
+          } else {
+            setMessage(data.message);
+            setStatus(LOAD_STATUS.ERROR);
+          }
+        } catch (error) {
+          setMessage(error.message);
+          setStatus(LOAD_STATUS.ERROR);
+        }
+      };
+      const convertData = ({ value }) => {
+        // console.log('convert value=', value);
+        // console.log('convert email=', value.email);
+           value = JSON.stringify({
+                email: value.email,
+                password: value.password,
+              });
+        return value;
+      }  
+// -----------------------------------------------------------------------up
+
   return (
-    <div class="container">
+    <div className="container">
                 <h1>Sign in</h1>
         <h3>Select login method</h3>
-        <div class="login-form">
-            {/* <h2>Sign In</h2> */}
-            <form id="login-form" method="POST" action="/login">
-                {/* <div class="form-group">
-                    <label for="username">Email</label>
-                    <input type="Continue" id="username" name="username" placeholder="Введіть email користувача" required />
-                </div> */}
-                <Field 
+        <div className="login-form">
+                {/* <Field 
                         name="email"
                         classname="form-group"
                         type="email"
                         label="Email"
                         action="signupForm.change"
                         placeholder="Введіть email користувача"
-                    />                 
-                {/* <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password" placeholder="Введите пароль" required />
-                </div> */}
+                    />   
                 <Field 
                         name="password"
                         classname="form-group"
@@ -35,25 +79,34 @@ export default function Component() {
                         label="Password"
                         action="signupForm.change(this.name,this.value)"
                         placeholder="Введiть пароль"
-                    />                  
-                {/* <div class="buttons">
-                    <label for="ref-signin" >Forgot you password?</label>
-                    <Link className="App-link-ref" id="ref-signin" to="/restore">
-                    restore
-                    </Link>
-                </div>         */}
-                <Buttonlink
+                    />   */}
+                {/* <Buttonlink
                         classname="buttons"                        
                         id="ref-signin"
                         label="Forgot you password?"
                         text="restore"
                         to="/restore"
                     />                         
-                {/* <div class="form-group">
-                    <button type="submit" id="login-button">Continue</button>
+                <div class="form-group">
+                    <button type="button" id="login-button">Continue1</button>
                 </div> */}
-                <Button classname="form-group" type="button" id="signin" text="Continue"  />
-            </form>
+{/* -------------------------------------down */}
+                <Grid>
+      <FieldForm2
+        name1="Email"
+        name2="Password"      
+        placeholder1="input email, please"
+        placeholder2="input password, please"
+        button="Continue2"
+        onSubmit={handleSubmit}
+      />
+      {status === LOAD_STATUS.ERROR && (
+        <Alert status={status} message={message} />
+      )}
+      {status === LOAD_STATUS.PROGRESS && <Loader />}
+    </Grid>
+{/* -------------------------------------up */}                 
+            {/* </form> */}
         </div>        
         <script src="script.js" />
     </div>

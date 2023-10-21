@@ -1,11 +1,11 @@
 import React from "react";
-import { createContext, useContext, useReducer } from 'react';
+import { createContext, useContext} from 'react';
 import { BrowserRouter, 
   Route, 
   Routes, 
   Navigate,
   // useState,
-  useNavigate,
+  // useNavigate,
   // useParams
  } from 'react-router-dom';
 //  import { Link } from 'react-router-dom';
@@ -118,38 +118,38 @@ const PrivateRoute: React.FC<{ children: React.ReactNode }> = ({
 };
 
 //--------------------------------------------------
-const Login: React.FC = () =>  {
-  const auth = useContext(AuthContext);
-  const navigate = useNavigate();
+// const Login: React.FC = () =>  {
+//   const auth = useContext(AuthContext);
+//   const navigate = useNavigate();
 
-  const handleClick = () => {
-    if(auth) {
-      auth.login(true);
-      navigate('/dashboard');
-    }
-  };
+//   const handleClick = () => {
+//     if(auth) {
+//       auth.login(true);
+//       navigate('/dashboard');
+//     }
+//   };
 
-  return (
-    <div onClick={handleClick} className="App-header">
-       Login
-    </div>
-  );
-};
+//   return (
+//     <div onClick={handleClick} className="App-header">
+//        Login
+//     </div>
+//   );
+// };
 //--------------------------------------------------
 
 
-type State = {
-  count: number;
-};
+// type State = {
+//   count: number;
+// };
 
-type Action1 = {
-  type: ACTION_TYPE;
-};
+// type Action1 = {
+//   type: ACTION_TYPE;
+// };
  
-enum ACTION_TYPE {
-  INCREMENT = "INCREMENT",
-  DECREMENT = "DECREMENT",
-}
+// enum ACTION_TYPE {
+//   INCREMENT = "INCREMENT",
+//   DECREMENT = "DECREMENT",
+// }
 
 // const stateReducer: React.Reducer<State, Action1> = {
 //   state: State,
@@ -180,7 +180,7 @@ enum ACTION_TYPE {
 
 
 function App() {
-  const [isLogged, login] = React.useState(true);
+  // const [isLogged, login] = React.useState(true);
 
   return (
     <AuthContext.Provider value={null} >
